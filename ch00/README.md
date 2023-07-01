@@ -89,3 +89,9 @@ $ git config --global --list
 그러면 설치완료가 된다.
 
 ![](https://velog.velcdn.com/images/bini/post/aa8efebe-a644-4188-9e29-8a25c89f3847/image.png)
+
+## 깃허브 가입
+
+[깃허브](https://github.com/)로 들어가서 일반 웹사이트 가입하는 것처럼 가입하면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/46ce4e7b-0c09-4f31-aa25-2c8b4f39fc44/image.png)
