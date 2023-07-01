@@ -38,3 +38,44 @@
 - 깃: 버전 관리 해주는 도구 = 버전관리시스템
 - 소스트리: 깃을 편하기 쓸수 있는 프로그램
 - 깃허브: 원격 저장소 호스팅 서비스 = 인터넷으로 깃을 관리하는 프로젝트를 관리해주는 서비스 (+ 개발자들 SNS)
+
+## 깃 설치하고 설정하기
+
+본 필자는 환경이 mac os이므로 mac 기준으로 작성하겠다.
+
+### Homebrew 설치
+
+먼저 깃을 설치함에 앞서서 홈브류라는 패키지 관리자를 설치하는게 좋다. 그래서 먼저 [homebrew](https://brew.sh/index_ko) 웹사이트로 들어가서 아래와 같은 명령어를 복사 후에 터미널에 실행시켜보자.
+
+```shell
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### git 설치
+
+```shell
+$ brew install git
+```
+
+위의 명령어 한 줄이면 바로 설치가 된다. 이후에 설정이 필요한데 설정하는 명령어는 다음과 같다.
+
+### 개행문자 설정
+
+```shell
+ $ git config --global core.autocrlf input ( 개행 문자 설정 :: MAC 기준 )
+ $ git config --global core.autocrlf true ( 개행 문자 설정 :: Windows 기준 )
+```
+
+### 사용자 정보, 커밋(버전 생성)을 위한 정보 등록
+
+```shell
+$ git config --global user.name 'YOUR_NAME'
+$ git config --global user.email 'YOUR_EMAIL'
+여기서 사용자 이름은 아무거나 지정해도 되지만 되도록 깃에 등록한 이름으로 하는것이 좋다.
+```
+
+### 구성확인
+
+```shell
+$ git config --global --list
+```
