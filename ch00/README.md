@@ -79,3 +79,13 @@ $ git config --global user.email 'YOUR_EMAIL'
 ```shell
 $ git config --global --list
 ```
+
+## 소스트리 설치하기
+
+[소스트리](https://www.sourcetreeapp.com/)를 방문하여 다운을 받는다.
+
+다운받은 파일을 실행 후, 깃의 사용자이름과 사용자 이메일을 작성한다.
+
+그러면 설치완료가 된다.
+
+![](https://velog.velcdn.com/images/bini/post/aa8efebe-a644-4188-9e29-8a25c89f3847/image.png)
