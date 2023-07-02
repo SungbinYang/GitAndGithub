@@ -107,3 +107,19 @@ merge하는 것은 간단하다. 브랜치를 생성후, 별도 커밋을 진행
 위의 그림처럼 내것(master)로 할지 저장소(다른 브랜치)로 할지 버튼으로 결정해주면 된다. 그 후에, 커밋을 다시 해주면 된다. 커밋을 다시 해줄 때는 파일 상태 탭에 들어가서 하단의 메세지 커밋을 누르면 자동으로 메세지를 작성해준 것을 볼 수 있다. 그것을 보고 커밋 버튼을 눌러서 커밋을 진행하면 된다.
 
 ![](https://velog.velcdn.com/images/bini/post/c913c388-44c3-401d-b6c9-fc477d210b02/image.png)
+
+## 브랜치 재배치 하기
+
+재배치란, rebase라고 하며, 뻗어나온 브렌치의 베이스를 다시 조정하는 것을 말한다.
+
+### 실습
+
+일단 아래와 같이 만들어준다.
+
+![](https://velog.velcdn.com/images/bini/post/feaacd6a-dfde-47ae-b7d1-8971609ce1bd/image.png)
+
+여기서 다른 브렌치로 체크아웃 후, 이동할 버전에 오른쪽 마우스를 클릭하여 재배치를 누르면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/6b7fb69b-704b-4e21-833f-6424c42395d1/image.png)
+
+![](https://velog.velcdn.com/images/bini/post/310a4019-52e6-4a4b-9444-72ce3bfef454/image.png)
