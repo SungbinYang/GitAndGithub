@@ -60,3 +60,26 @@
 예를들어 새로운 브랜치가 뻗어나오고 새로운 브랜치에 커밋이 쌓이고 병합되는 순간까지 master브랜치가 가만히 있는 상황은 master 브랜치는 마치 빨리감기하듯이 그저 새로운 브랜치에 추가된 커밋을 반영하기만 하면된다. 이러한 기법을 빨리감기병합이라고 한다.
 
 만약 위의 예시와 다르게 새로운 브랜치도 커밋이 쌓이고 master 브랜치도 커밋이 생긴 상황에서 merge하면 master와 새로운 브랜치가 합쳐진 새로운 커밋이 생기는 상황도 생긴다.
+
+## 브랜치 합치기 실습
+
+merge하는 것은 간단하다. 브랜치를 생성후, 별도 커밋을 진행하고 master로 체크아웃 한 뒤, 합치고 싶은 브랜치의 오른쪽 버튼을 누른 뒤 현재 브랜치로 병합을 누르면 된다. 그러면 우리가 앞에서 본 빨리감기 병합과 아닌 병합을 아래의 그림처럼 실습해보았다.
+
+![](https://velog.velcdn.com/images/bini/post/7656f65e-7cee-4221-9225-551551998835/image.png)
+
+![](https://velog.velcdn.com/images/bini/post/730a61bf-592e-49a9-b5c8-5be4ceca90ee/image.png)
+
+
+아래의 그림은 빨리감가 병합이 아닌 실습이다.
+
+아래처럼 bar브랜치를 만들고 bar브랜치의 변경사항을 커밋하고 master브랜치도 변경사항을 커밋한 상태이다.
+
+![](https://velog.velcdn.com/images/bini/post/c9663d09-b95b-4358-ae0e-3b9216dae856/image.png)
+
+이제 master브랜치와 bar브랜치를 합쳐보자.
+
+![](https://velog.velcdn.com/images/bini/post/8c14593e-7456-4493-87e2-a222d7eff327/image.png)
+
+그러면 아래와 같이 새로운 커밋이 만들어진게 보일 것이다.
+
+![](https://velog.velcdn.com/images/bini/post/371aa11f-bc88-43f7-b991-4e43017f6836/image.png)
