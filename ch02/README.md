@@ -63,3 +63,25 @@ reset의 실습과정은 돌리고 싶은 버전의 오른쪽 버튼을 눌러�
 ![](https://velog.velcdn.com/images/bini/post/b9d232a9-e242-4d99-b8b6-9617b61dcc97/image.png)
 
 ![](https://velog.velcdn.com/images/bini/post/f98b350b-4189-46b7-8697-f6e286e8d2ba/image.png)
+
+## 작업 임시 저장하기
+
+누군가 작업했던 것을 임시저장하고 싶을 때가 있다. 예를들어 작업중에 PM분이 더 급한건이 있어서 이것부터 처리해달라는 경우가 있을 수 있고 내가 작업했던 파일이 잘 만들어져서 어디선가 재활용이 가능할것 같은 것들을 임시저장할 수 있다.
+
+소스트리에서는 이런 경우에 스태시라는 것을 활용할 수 있다. 먼저 변경사항을 만들고 우측 상단에 스태시를 클릭해보자. 그리고 메세지와 적고 스태시를 하면 왼쪽 메뉴부분에 치워두기 부분에 내가 작성한 메세지가 나오는것을 확인이 가능하다. 이것을 더블클릭해서 복원도 가능하고 오른쪽 마우스 클릭해서 삭제도 가능하다.
+
+일단 아래와 같이 변경사항을 만들어보자.
+
+![](https://velog.velcdn.com/images/bini/post/04c915a9-b27b-4831-8924-3ce42ff63fc2/image.png)
+
+다음에 우측 상단에 스태시라는 버튼을 클릭하고 아래와 같은 팝업이 뜨면 메세지를 자세히 적고 스태시를 클릭해보자.
+
+![](https://velog.velcdn.com/images/bini/post/a4636963-50de-452f-a541-cc4b6096e3d4/image.png)
+
+그러면 아래와 같이 작업공간은 깨끗해질것이고 좌측에 치워두기에 내가 임시저장한것을 볼 수 있을 것이다.
+
+![](https://velog.velcdn.com/images/bini/post/a32bc2df-7257-41eb-a2b3-4a643294af83/image.png)
+
+그리고 임시저장한것을 되돌리려면 치워두기의 임시저장한 목록을 더블클릭하여 되돌리면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/637721b0-a371-44e9-be9f-e09bb6cbad1f/image.png)
