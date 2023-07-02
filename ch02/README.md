@@ -49,3 +49,17 @@
 > 🙋🏻 Q&A
 > Q) 언제 revert를 쓰고 언제 reset을 쓸까?
 > A) 모든 버전을 유지하려면 revert를 아니면 reset을 사용한다.
+
+## revert, reset 실습
+
+revert 실습과정은 해당 버전의 오른쪽 버튼을 눌러서 커밋 되돌리기를 누르면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/f8e2b078-475c-4f21-9360-8875664d8a91/image.png)
+
+![](https://velog.velcdn.com/images/bini/post/3fefb6fe-a551-4f4d-a5a2-e5de357c98a1/image.png)
+
+reset의 실습과정은 돌리고 싶은 버전의 오른쪽 버튼을 눌러서 master를 이 커밋으로 초기화 버튼을 누른 후 원하는 유형의 reset을 선택하면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/b9d232a9-e242-4d99-b8b6-9617b61dcc97/image.png)
+
+![](https://velog.velcdn.com/images/bini/post/f98b350b-4189-46b7-8697-f6e286e8d2ba/image.png)
