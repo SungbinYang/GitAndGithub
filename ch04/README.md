@@ -124,3 +124,75 @@
 즉 add readme는 자동으로 readme를 만들어주는 것인데 일단 우린 생략하고 create repository를 눌러보면 아래와 같이 빈 repository가 나오게 된다.
 
 ![](https://velog.velcdn.com/images/bini/post/0bdd6cb4-7c20-4c03-808e-9a7e379de3bc/image.png)
+
+## 깃허브와 소스트리 연동하기
+
+깃허브와 소스트리를 연동하려면 일단 SSH 연결이 필요하다.
+
+> 💡 연동
+SSH(Secure Shell)란?
+깃허브와 우리의 컴퓨터가 안전하게 통신을 주고 받을 수 있는 방법
+
+SSH통신을 하려면 키 2개를 생성해야 한다. 여기서 키라는 것은 암호로 보면 될 것이고 컴퓨터 세계의 암호란 무작위 긴 문자열을 뜻할 것이다.
+
+여기서 키 2개는 공개키와 개인키이다. 공개키와 개인키를 생성 한 뒤 통신하려는 대상에게 공개키를 건네준다. 즉, 우리는 깃허브에게 공개키를 전달해주면 될 것이다.
+
+> 🙋🏻 키가 왜 필요해요?
+
+우리가 코드나 메세지를 깃허브에게 전달할 때 일반적으로 전달하면 해킹위험이 있기에 개인키로 암호화 후 전달하면 깃허브에서 공개키로 복호화하여 우리가 보냈다라는 것을 식별한다.
+
+그러면 지금부터 실습을 통해 소스트리와 깃허브 연동을 해보겠다.
+
+### 키 생성
+
+MAC에서는 키 생성 명령을 아래와 같이 입력한다.
+
+``` shell
+ssh-keygen
+```
+
+그리고 묻는 질문들이 있는데 그냥 엔터를 눌러주면 키가 생성된다. (중요한 키이므로 이미지는 생략한다.)
+
+그리고 생성된 키를 cat명령어로 내용을 확인한 후 복사한다.
+
+### 깃허브 세팅
+
+깃허브 프로필의 세팅을 누른다.
+
+![](https://velog.velcdn.com/images/bini/post/bd840cbf-336f-4cf8-ad99-aab5c95f00c7/image.png)
+
+다음으로 ssh and gpg keys 탭을 누른다. 그리고 new ssh key를 누른다.
+
+![](https://velog.velcdn.com/images/bini/post/e100510e-d128-48e0-9cf1-9c6c381d4de8/image.png)
+
+타이틀에 원하는 제목을 작성하고 key에 아까 터미널로 생성해서 복사한 key를 입력해준다.
+
+![](https://velog.velcdn.com/images/bini/post/010f2ef7-e739-4ba0-b266-5d4902c42868/image.png)
+
+깃허브 패스워드 입력을 하거나 모바일 인증을 한 뒤에
+
+![](https://velog.velcdn.com/images/bini/post/21cbb4e5-8d5c-4639-b0d0-daa30e4bfde1/image.png)
+
+소스트리로 와서 설정을 누르면
+
+![](https://velog.velcdn.com/images/bini/post/5c574cdf-a520-4a9b-b1d3-0f58e699975f/image.png)
+
+계정 탭을 누르고 추가 버튼을 누른다.
+
+![](https://velog.velcdn.com/images/bini/post/668e2b7c-118a-4524-9ad4-7e29e34af34b/image.png)
+
+그리고 호스트를 Github로 변경하고 계정연결 버튼을 누른다.
+
+![](https://velog.velcdn.com/images/bini/post/22e40c43-c09d-4a80-993f-7a7acf798020/image.png)
+
+Authorization atlassian을 누른다.
+
+![](https://velog.velcdn.com/images/bini/post/40f264a9-c9d7-436f-9403-0b8d9ca1a2c9/image.png)
+
+그러면 아래와 같이 깃허브 계정이름이 연동된다.
+
+![](https://velog.velcdn.com/images/bini/post/7f755adc-2064-489d-a314-db18d196801b/image.png)
+
+그리고 저장을 누른 후 원격탭을 누르면 내 깃허브에 올라가있는 레포지토리들을 확인할 수 있다.
+
+![](https://velog.velcdn.com/images/bini/post/e23f56c3-3f5a-48bb-940f-1ed4237264bb/image.png)
