@@ -363,3 +363,89 @@ Authorization atlassian을 누른다.
 ![](https://velog.velcdn.com/images/bini/post/eca7a346-14bb-42aa-b6db-f871f5d24986/image.png)
 
 그러면 위와 같이 한번에 병합까지 이루어진 것을 볼 수 있다.
+
+## 풀 리퀘스트: 깃허브로 협업하기
+
+> 🙋🏻 일반적으로 내가 소유하지 않은 원격 저장소에 푸시할 수 있을까?
+> A) No!
+
+> 🙋🏻 왜 푸시를 못할까?
+> A) 남의 프로젝트를 망칠 수 있기 때문이다.
+
+> 🙋🏻 그러면 다른 원격저장소로 어떻게 푸시할 수 있을까?
+> A) pull request를 보내면 된다.
+
+풀 리퀘스트란 "내가 당신의 원격 저장소를 이렇게 변경하고 싶은데 이 변경사항을 원격저장소로 pull해달라고 요청"인 것이다.
+
+> 💁🏻 일반적으로 개발자들은 원격 저장소를 두고 협업을 진행할 때 pull request 방법을 통해서 코드를 논의하고 주고 받으며 협업을 이룬다.
+
+pull request 방법에는 다음 순서로 진행한다.
+
+1. 기여하려는 저장소를 본인 계정으로 포크하기
+   일반적으로 여러분이 소유하지 않은 원격 저장소에는 푸시할 수 없다. 그렇기에 여러분의 계정으로 원격저장소를 복제해와야 하는데 이 과정을 포크라고 한다.
+
+![](https://velog.velcdn.com/images/bini/post/20bb53c5-6d4c-4cdd-84d3-db08f15b5c30/image.png)
+
+위의 그림에 fork를 눌러 프로젝트를 복제해온다.
+
+![](https://velog.velcdn.com/images/bini/post/507eaac7-8e6e-4fc1-9bba-d4e2be060ec2/image.png)
+
+create fork를 눌러 fork를 진행한다.
+
+![](https://velog.velcdn.com/images/bini/post/0b79288c-d3e6-4360-a94b-b1938d5fc41a/image.png)
+
+그럼 위의 그림처럼 내 저장소에 원격저장소가 fork된 것을 볼 수 있다.
+
+2. 포크한 본인 계정의 저장소를 클론하기
+   우리가 소유하지 않은 원격 저장소에 푸시하기는 불가능할지 몰라도 포크한 원격 저장소에 푸시하기는 가능하다. 그래서 포크한(여러분의 계정으로 복제된) 저장소를 클론한다.
+
+![](https://velog.velcdn.com/images/bini/post/2c8d64dc-d01f-432f-a1e9-328ecdb02495/image.png)
+
+위의 소스트리로 와서 원격 탭에서 내가 fork한 프로젝트를 클론한다.
+
+![](https://velog.velcdn.com/images/bini/post/adeb3a93-e076-40c2-a6ff-5a230c15ec39/image.png)
+
+그러면 위와 같이 소스트리 화면이 나온다.
+
+3. 브랜치 생성 후 생성한 브랜치에서 작업하기
+   새로운 브랜치를 생성한 후 해당 브랜치에서 변경사항을 만들고 커밋한다.
+
+![](https://velog.velcdn.com/images/bini/post/e50f7310-f389-410c-b6f1-3b2fcc563ade/image.png)
+
+먼저 브랜치 버튼을 누르고 브랜치를 만든다.
+
+![](https://velog.velcdn.com/images/bini/post/2443cd98-97cb-4a25-9ab5-0adceaf4f94e/image.png)
+
+그리고 해당 파일을 열어서 변경사항을 만들고 버전으로 만든다.
+
+![](https://velog.velcdn.com/images/bini/post/47e82b02-fd99-40ff-9af2-882ee1b4fa7c/image.png)
+
+![](https://velog.velcdn.com/images/bini/post/0bae578c-6b13-4137-908c-6ed02577518e/image.png)
+
+버전으로 만들면 위와 같이 나올 것이다.
+
+4. 작업한 브랜치 푸시하기
+   생성한 브랜치를 푸시한다. 그러면 깃허브에 풀 리퀘스트 버튼이 생긴다.
+
+![](https://velog.velcdn.com/images/bini/post/5b854234-c734-4bda-96d3-e0a5201a2b51/image.png)
+
+위에 푸시버튼을 눌러서 브랜치를 푸시한다.
+
+![](https://velog.velcdn.com/images/bini/post/79b6c489-0c57-47b6-8adc-af68ab5614e6/image.png)
+
+그러면 깃허브에 위와 같이 pull request 버튼이 생긴다. 이것을 클릭하면
+
+![](https://velog.velcdn.com/images/bini/post/3014768b-e154-40c9-ba1e-54f0b4e86590/image.png)
+
+작성한 커밋 메세지와 변경사항을 확인할 수 있고 create pull request를 누르자.
+
+![](https://velog.velcdn.com/images/bini/post/ef161aea-8cf6-442e-8c56-4a67d48b0779/image.png)
+
+그러면 다음과 같이 성공적으로 pull request를 보낸 것을 알 수 있다.
+
+그러면 원격저장소 주인이 머지를 해주면 내 깃허브에 아래와 같이 브랜치를 없앨것이냐 묻는다.
+물론 계속 작업을 할 것이면 두는게 맞지만 일반적으로 바로 삭제해주는 것이 좋다.
+
+![](https://velog.velcdn.com/images/bini/post/501152bb-916c-4809-a596-58367dcd7866/image.png)
+
+![](https://velog.velcdn.com/images/bini/post/c6b17980-ab2b-4f07-84d4-3d909695a7cf/image.png)
