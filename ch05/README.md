@@ -133,3 +133,33 @@ git log
 ![](https://velog.velcdn.com/images/bini/post/b3448d80-f40d-4b92-a51b-305b69180bea/image.png)
 
 해당 log를 빠져나가기 위해서는 q버튼을 누르면 된다.
+
+## 커밋 다양하게 조회하기
+
+앞서서 `git log` 명령어를 통해 아래와 같이 커밋들을 조회할 수 있다고 하였다.
+
+![](https://velog.velcdn.com/images/bini/post/32b5be3e-0453-4a82-bed2-86aa7035cd38/image.png)
+
+그런데 이 `git log` 명령어는 한눈에 와닿지 않고 깃로그가 너무 길어서 옵션을 통해 다양하게 출력할 수 있다.
+
+### git log --oneline
+
+커밋한 버전들을 한줄로 출력하는 명령어이다. 즉, 짧은 커밋 해시로서 모든 커밋이 1줄로 출력된다.
+
+![](https://velog.velcdn.com/images/bini/post/2564bea8-4700-4760-9238-38fd9816100f/image.png)
+
+### git log -p (git log --patch)
+
+각각의 커밋이 어느 변경사항을 담고 있는지 출력해주는 명령어이다.
+
+![](https://velog.velcdn.com/images/bini/post/18424ec0-1de6-409e-bfd2-ede31e47d833/image.png)
+
+### git log --graph
+
+깃 로그들을 소스트리처럼 브랜츠 그래프 형식으로 보여주는 명령어이다.
+
+![](https://velog.velcdn.com/images/bini/post/3b82547e-8043-4e31-9bcf-74b715d8f1ff/image.png)
+
+또한 다른 옵션과 섞어서 쓸 수 있다. 아래는 --oneline과 --graph를 섞어서 사용한 결과이다.
+
+![](https://velog.velcdn.com/images/bini/post/d9bbd34d-b92a-4152-a333-ee58f98325ed/image.png)
