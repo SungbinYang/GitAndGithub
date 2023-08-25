@@ -163,3 +163,51 @@ git log
 또한 다른 옵션과 섞어서 쓸 수 있다. 아래는 --oneline과 --graph를 섞어서 사용한 결과이다.
 
 ![](https://velog.velcdn.com/images/bini/post/d9bbd34d-b92a-4152-a333-ee58f98325ed/image.png)
+
+## 태그 관리하기
+
+### git tag <태그>: 태그 추가하기
+
+명령어로 커밋에 태그를 다는 방법은 아래와 같이 입력하면 된다.
+
+```bash
+git tag 태그이름
+```
+
+위와 같이 하면 최신 커밋에 태그가 붙여진다.
+
+![](https://velog.velcdn.com/images/bini/post/0250b0fd-5bd1-49f9-9866-fb03af536e9b/image.png)
+
+특정 커밋에 태그를 붙이는 방법은 아래와 같다.
+
+```bash
+git tag 태그이름 특정커밋해시
+```
+
+여기서 커밋해시는 긴 커밋해시를 적어도 되지만 짧은 커밋 해시를 입력해도 괜찮다.
+
+### git tag --list: 태그 조회하기
+
+깃 태그들을 조회하는 명령어는 아래와 같다.
+
+```bash
+git tag --list
+
+git tag -l
+
+git tag
+```
+
+위의 3가지 명령어중 하나를 입력하면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/21bdb490-ae9c-486a-a677-e1cde5d36c96/image.png)
+
+### git tag --delete <태그>: 태그 삭제하기
+
+태그를 삭제하는 명령어는 아래와 같다.
+
+```bash
+git tag --delete <태그>
+```
+
+![](https://velog.velcdn.com/images/bini/post/9080681d-ee45-4bda-9c2f-a08d6a9d5358/image.png)
