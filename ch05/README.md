@@ -246,3 +246,31 @@ git diff <커밋> <커밋>
 
 > ⚠️ 주의
 > 커밋끼리 비교할때 커밋의 순서가 중요하다 앞의 커밋은 뒤의 커밋보다 이전 커밋이여야 한다. 만약 반대로 하면 결과도 반대로 나올 것이다.
+
+## 작업 되돌리기
+
+### git revert <취소할 커밋> : 취소된 새로운 커밋 만들기
+
+```bash
+git revert <취소할 커밋>
+```
+
+revert를 명령어로 하는 방법은 `git revert <취소할 커밋 해시>`를 입력하면 된다. 커밋해시는 당연히 긴 커밋해시뿐만 아니라 짧은 커밋해시도 가능하다. 입력하게 되면 아래와 같이 나온다.
+
+![](https://velog.velcdn.com/images/bini/post/ab2908a4-7e68-4f80-87ac-4c94faf618dc/image.png)
+
+vim화면이 나오는데 자동으로 커밋 메세지를 적어주었기 때문에 :wq로 저장후 나가기를 하면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/32d6a706-750c-47af-9cf9-3d6abcff1b3e/image.png)
+
+그리고 `git log -p`명령어로 확인하면 위와 같이 잘 revert가 되었다는것을 볼 수 있다.
+
+### git reset <되돌아 갈 커밋>: 예전 커밋으로 되돌아가기
+
+```bash
+git reset <되돌아 갈 커밋>
+```
+
+revert와 다른 점은 reset 뒤에 되돌아 갈 커밋을 적어준다는 점이다. 그리고 소스트리때 배웠듯이 옵션이 soft, mixed, hard가 있다. 옵션이 없으면 기본은 mixed이며 옵션을 적어줄려면 reset 뒤에 --옵션명을 적어주면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/75babb27-3a10-4d0c-b18a-d3f8b8a67515/image.png)
