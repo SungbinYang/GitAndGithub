@@ -211,3 +211,38 @@ git tag --delete <태그>
 ```
 
 ![](https://velog.velcdn.com/images/bini/post/9080681d-ee45-4bda-9c2f-a08d6a9d5358/image.png)
+
+## 작업 내역 비교하기
+
+### git diff: 최근 커밋과 작업 디렉터리 비교하기
+
+```bash
+git diff
+```
+
+git diff는 지금까지 작업 디렉터리 변경사항과 가장 최신 커밋의 차이를 보여주는 명령어이다.
+
+![](https://velog.velcdn.com/images/bini/post/0cf51b58-bef2-4b73-a67e-422e821a5747/image.png)
+
+### git diff --staged: 최근 커밋과 스테이지 비교하기
+
+```bash
+git diff --staged
+```
+
+스테이지와 최근 커밋의 비교하는 명령어는 위와 같으며 이와 같은 명령어로 `git diff --cached`가 있다.
+
+![](https://velog.velcdn.com/images/bini/post/66117157-ca08-4619-8772-3045c420a33c/image.png)
+
+### git diff <커밋> <커밋> : 커밋끼리 비교하기
+
+```bash
+git diff <커밋> <커밋>
+```
+
+커밋끼리 비교하는 명령어는 위와 같다.
+
+![](https://velog.velcdn.com/images/bini/post/77263b22-a298-4ab2-92a2-dbe2c0cad8ff/image.png)
+
+> ⚠️ 주의
+> 커밋끼리 비교할때 커밋의 순서가 중요하다 앞의 커밋은 뒤의 커밋보다 이전 커밋이여야 한다. 만약 반대로 하면 결과도 반대로 나올 것이다.
