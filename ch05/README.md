@@ -418,3 +418,23 @@ merge를 하다보면 충돌이 빈번히 발생하기 마련이다. 이제 명�
 이제 로그를 확인해보자.
 
 ![](https://velog.velcdn.com/images/bini/post/880e8578-e737-470a-8ff0-0fb19fbd2f33/image.png)
+
+## rebase 하기
+
+### git rebase <브랜치>: 브랜치 재배치 하기
+
+```bash
+git rebase <브랜치 이름>
+```
+
+일단 rebase실습에 앞서서 아래와 같이 커밋과 브랜치를 만들어둔다.
+
+![](https://velog.velcdn.com/images/bini/post/7e1e5f20-439b-429c-ba7f-96081ce6f5de/image.png)
+
+브랜치의 위치를 다시금 조정하는 명령어로 git rebase master로 하면 된다. 단, rebase할 때 rebase할 브랜치로 체크아웃이 되어 있어야 한다.
+
+![](https://velog.velcdn.com/images/bini/post/676ff74d-d380-43a4-ab7b-6b0d39f3a1a0/image.png)
+
+이제 log로 결과를 확인하자.
+
+![](https://velog.velcdn.com/images/bini/post/b314f1b9-6e39-42ac-bad6-20da1918c013/image.png)
