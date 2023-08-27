@@ -327,3 +327,94 @@ git stash drop <스태시>
 stash한 리스트들을 삭제할려면 위와 같이 작성해주면 된다. 여기서 스태시는 적용할때와 같이 stash@{0}과 같은 것을 작성해주면 된다.
 
 ![](https://velog.velcdn.com/images/bini/post/49a295ff-745d-43a5-8e9d-71b0825f5b33/image.png)
+
+## 브랜치 관리하기
+
+### git branch: 브랜치 리스트 확인
+
+```bash
+git branch
+```
+
+브랜치는 어떤게 있고 head는 어디를 가르키는지 확인하고 싶으면 위와 같은 명령어를 작성하면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/da56c0c1-a1ca-4ac7-8dbd-9a58dbc271e0/image.png)
+
+### git branch <브랜치>: 브랜치 나누기
+
+```bash
+git branch <브랜치 이름>
+```
+
+브랜치 생성 명령어는 위와 같다. 위의 명령어를 입력하고 잘 생성되었는지 `git branch`로 확인해보자.
+
+![](https://velog.velcdn.com/images/bini/post/041171ab-2076-4f6d-9495-24942239a99c/image.png)
+
+### git checkout <브랜치>: 체크아웃하기
+
+```bash
+git checkout <브랜치 아름>
+```
+
+이제 생성한 브랜치로 작업을 진행할려면 체크아웃을 진행해야 한다. 체크아웃 명령어는 위와 같다.
+
+![](https://velog.velcdn.com/images/bini/post/683a7e1f-0b58-4268-920e-c571c28a1789/image.png)
+
+> ⚠️ 주의
+> 여기서 주의사항이 있다. git log를 할때 주의를 해야하는데 예를 들어 foo 브랜치에 커밋을 진행하고 master 브랜치로 체크아웃후 log를 확인해보면 foo브랜치에서 만든 커밋로그들은 안 보일 것이다.
+> ![](https://velog.velcdn.com/images/bini/post/6eb4b121-d47d-4c0c-a707-359a59fe78c0/image.png)
+> 왜냐하면 `git log`명령어는 현재 브랜치 최신 커밋만 보여주고 다른 브랜치 커밋들은 안 보여주기 때문이다.
+> 다른 브랜치 커밋도 확인하고 싶으면 `git log --branches`로 입력하면 잘 보일 것이다.
+> ![](https://velog.velcdn.com/images/bini/post/219d4dca-a03c-4092-a55a-3f3c5cfaee0c/image.png)
+
+여기서 더 하나 알아둬야 할께 브랜치 생성과 동시에 체크아웃을 진행할려면 아래와 같이 입력하면 된다.
+
+```bash
+git checkout -b <브랜치 이름>
+```
+
+### git merge <브랜치>: 브랜치 병합하기
+
+```bash
+git merge <합칠 브랜치 이름>
+```
+
+브랜치끼리 병합을 할려면 병합할려는 브랜치가 아닌 합쳐질 브랜치로 체크아웃 후 위의 명령어를 입력하면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/5de19955-6a3f-4ca1-b338-d38e91b7c58b/image.png)
+
+### git branch -d <브랜치>: 브랜치 삭제하기
+
+```bash
+git branch -d <삭제할 브랜치 이름>
+```
+
+병합을 했으면 이제 합쳐진 브랜치는 사용 안 하면 삭제를 해줘야 할 것이다. 위와 같이 입력하면 브랜치 삭제가 가능하다.
+
+![](https://velog.velcdn.com/images/bini/post/92532f70-cd3a-4406-9a65-7079245e5e8c/image.png)
+
+### 충돌 해결하기
+
+merge를 하다보면 충돌이 빈번히 발생하기 마련이다. 이제 명령어로 어떻게 충돌을 하는지 살펴보자. 일단 master브랜치에 b.txt를 생성후 bar 브랜치를 생성하고 각각 b.txt를 다르게 수정해보자.
+
+![](https://velog.velcdn.com/images/bini/post/843bce11-4468-45b9-9595-b13b48a1a3a2/image.png)
+
+그리고 merge를 진행하면 아래와 같이 경고표시가 뜰 것이다.
+
+![](https://velog.velcdn.com/images/bini/post/84cf51eb-ca9a-47e6-afa4-7fd5c8a7f6f2/image.png)
+
+그리고 b.txt를 가보면 소스트리때 봤던 것과 똑같이 아래와 같이 표시가 될것이다.
+
+![](https://velog.velcdn.com/images/bini/post/4877c4db-b627-4cf0-9cf1-385c19ddc559/image.png)
+
+여기서 head와 ===사이는 현재 브랜치의 수정한 파일의 내용이고 그 아래는 다른 브랜치의 내용이다. 여기서 우리가 선택을 해주면 된다. 예를 들어 Master를 반영한다고 하면 텍스트 파일에 Master로 적고 저장을 한다. 그리고 다시 커밋을 진행하면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/8933f587-2eb9-486f-ab4c-dd4d92d98b9d/image.png)
+
+그러면 위와 같이 vi창에 자동으로 커밋 메세지가 작성이 될 것이고 :wq를 눌러 저장후 나오면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/9e4607a0-3769-4c1e-8bf2-1189a545b875/image.png)
+
+이제 로그를 확인해보자.
+
+![](https://velog.velcdn.com/images/bini/post/880e8578-e737-470a-8ff0-0fb19fbd2f33/image.png)
