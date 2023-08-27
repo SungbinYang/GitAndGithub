@@ -561,3 +561,33 @@ git pull -u origin master
 다시한번 깃허브에 새로운 파일을 생성 후에 위와 같이 명령어를 작성해보자. 여기도 마찬가지로 이전에 -u옵션을 주어서 push나 fetch를 했다면 아래와 같이 `git pull`만 해주면 된다.
 
 ![](https://velog.velcdn.com/images/bini/post/f214d315-799b-42de-a258-88d1951b1c62/image.png)
+
+## 명령어로 풀 리퀘스트 보내기
+
+![](https://velog.velcdn.com/images/bini/post/0d30362c-958a-441f-b3c6-d5f04372c387/image.png)
+
+먼저 pull request를 보낼려면 다른 사용자의 원격저장소를 fork해와야 한다. 그런데 혹시나 이미 fork를 받았다면 위의 사진처럼 sync fork를 눌러서 동기화를 해줘야 한다. 왜냐하면 내가 fork한 시점과 지금 시점에 여러개의 commit들이 쌓여있기 때문이다.
+
+![](https://velog.velcdn.com/images/bini/post/0d12d965-a22d-4720-8f3e-1c2607f31e04/image.png)
+
+sync fork를 누르고 update branch를 눌르면 위의 사진처럼 나올 것이다.
+
+![](https://velog.velcdn.com/images/bini/post/1d333bf1-71d7-4e42-9653-f8e63402bad4/image.png)
+
+이제 위의 ssh를 복사하고
+
+![](https://velog.velcdn.com/images/bini/post/0082102d-a516-4139-b213-607ed725a735/image.png)
+
+내 로컬 저장소에 가서 위와 같이 clone을 받아온다.
+
+![](https://velog.velcdn.com/images/bini/post/a18e5fd3-d40b-42b4-a72b-5bdd3f02c692/image.png)
+
+다음으로 브랜치를 생성 후에 변경사항을 생성한 다음에 push를 한다.
+
+![](https://velog.velcdn.com/images/bini/post/d61321ed-cf73-4309-a313-306312283c28/image.png)
+
+그러면 위에처럼 alert창이 뜰 것이고 pull request를 보낸다.
+
+![](https://velog.velcdn.com/images/bini/post/010de634-7626-49d0-88be-94259b2ec92b/image.png)
+
+![](https://velog.velcdn.com/images/bini/post/b089f3e0-b578-4856-90eb-539e752f16db/image.png)
