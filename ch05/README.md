@@ -438,3 +438,82 @@ git rebase <브랜치 이름>
 이제 log로 결과를 확인하자.
 
 ![](https://velog.velcdn.com/images/bini/post/b314f1b9-6e39-42ac-bad6-20da1918c013/image.png)
+
+## 원격 저장소와 상호작용하기 (1) clone, push
+
+### git clone: 원격 저장소 복제하기
+
+```bash
+git clone <원격저장소 url 혹은 ssh>
+```
+
+위의 명령어로 원격저장소를 복제해올 수 있다.
+
+![](https://velog.velcdn.com/images/bini/post/409cc967-17b0-4352-b288-3f7821ae6a41/image.png)
+
+위의 원격저장소의 code버튼을 눌러서 해당 원격저장소 ssh를 복사하자.
+
+그리고 아래와 같이 입력을 하면 복제가 된 것을 확인 할 수 있다.
+
+![](https://velog.velcdn.com/images/bini/post/2795197d-0e55-4d7e-9fd9-045d7ed02aa1/image.png)
+
+### git remote: 원격 저장소를 추가, 조회, 삭제하기
+
+![](https://velog.velcdn.com/images/bini/post/dfea69fe-38f0-43ff-b0d9-fbd169a0e9c7/image.png)
+
+위 처럼 내 원격저장소에 repository를 생성하고 url을 일단 복사하자.
+
+![](https://velog.velcdn.com/images/bini/post/1a74da85-1e79-4ab6-bcbe-494fd8859a03/image.png)
+
+그리고 위처럼 나의 로컬저장소를 만들자.
+
+![](https://velog.velcdn.com/images/bini/post/d81ba5ad-a921-4d96-bcdf-5ad8a67c200d/image.png)
+
+그리고 변경사항 생성 후 커밋을 하고 브랜치 이름을 변경하자. 브랜치 이름을 변경하는 명령어는 아래와 같다.
+
+```bash
+git branch -M <변경할 브랜치 이름>
+```
+
+여기서 굳이 main브랜치로 이름을 변경하는 이유는 깃허브는 기본으로 제공해주는 브랜치 이름이 main이기 때문이다.
+
+![](https://velog.velcdn.com/images/bini/post/600c211f-3338-4ece-906e-501b3c5a4f33/image.png)
+
+다음으로 원격저장소에 별명을 지어주자. 별명을 지어주는 이유는 앞전 포스트에 설명했지만 긴 url 혹은 ssh를 그대로 적어주기 불편하기 때문이다.
+
+```bash
+git remote add <원격저장소 별명> <원격저장소 주소>
+```
+
+위와 같이 작성해주면 별명이 생성된다.
+
+```bash
+git remote
+```
+
+위의 명령어로 별명 리스트들을 확인 할 수 있다.
+
+> 💡 참고
+> 상세하게 별명 리스들을 보고 싶으면 아래와 같이 옵션 -v를 붙여주면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/c7617500-4dfd-4284-ac04-54f4fab481af/image.png)
+
+> 💡 참고
+> 원격 저장소 별명을 삭제하는 명령어는 아래와 같다.
+
+```bash
+git remote remove <원격저장소 별명>
+```
+
+### git push: 원격 저장소에 밀어넣기
+
+```bash
+git push -u <원격저장소 별명> <브랜치 별명>
+```
+
+위와 같이 작성하면 해당 커밋들을 원격저장소에 밀어 넣을 수 있다.
+
+![](https://velog.velcdn.com/images/bini/post/505b1c4b-fb9f-443f-82e0-c0b27fa54d85/image.png)
+
+> 💁🏻 참고
+> push를 할 대 -u옵션은 생략이 가능하지만 -u옵션을 붙여주면 나중에 push를 할 때는 `git push`만 해주면 된다.
