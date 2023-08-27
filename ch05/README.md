@@ -517,3 +517,47 @@ git push -u <원격저장소 별명> <브랜치 별명>
 
 > 💁🏻 참고
 > push를 할 대 -u옵션은 생략이 가능하지만 -u옵션을 붙여주면 나중에 push를 할 때는 `git push`만 해주면 된다.
+
+## 원격 저장소와 상호작용하기 (2) fetch, pull
+
+### git fetch: 원격 저장소를 일단 가져만 오기
+
+```bash
+git fetch -u origin main
+```
+
+![](https://velog.velcdn.com/images/bini/post/fea9ef67-0eb1-49fc-800e-b6ae49a9dc8f/image.png)
+
+일단 fetch에 앞서서 깃허브 내에서 파일을 생성해보자. 위와 같이 버튼을 누르고
+
+![](https://velog.velcdn.com/images/bini/post/734339fd-1964-4412-aef9-3915b05e1c8b/image.png)
+
+위와 같이 작성 후에 커밋을 한다.
+
+![](https://velog.velcdn.com/images/bini/post/ab29fd91-2769-4492-93b0-d6520a6f6350/image.png)
+
+그 후에 위에서 작성했던 명령어를 작성해준다. 그런데 -u옵션은 생략가능하고 전 포스트에 -u를 적어서 push를 했으면 다음부터는 fetch도 위와 같이만 적어도 fetch가 가능하다.
+
+![](https://velog.velcdn.com/images/bini/post/117c6fa4-b80f-4e7a-ada7-95f3a147b499/image.png)
+
+그리고 이제 잘 fetch가 되었는지 확인할려면 origin/main브랜치로 체크아웃 후 로그를 확인해주면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/20956d95-33cf-41c4-a5e6-dd3ccf8ab739/image.png)
+
+혹은 `git checkout FETCH_HEAD`로 체크아웃 후 로그로 확인이 가능하다.
+
+![](https://velog.velcdn.com/images/bini/post/8e0044fc-a644-47c4-9c3a-f00c4e297a15/image.png)
+
+이제 아래와 같이 merge를 해주면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/af78a767-e35a-435f-94bc-079058800224/image.png)
+
+### git pull: 원격저장소를 가져와서 합치기
+
+```bash
+git pull -u origin master
+```
+
+다시한번 깃허브에 새로운 파일을 생성 후에 위와 같이 명령어를 작성해보자. 여기도 마찬가지로 이전에 -u옵션을 주어서 push나 fetch를 했다면 아래와 같이 `git pull`만 해주면 된다.
+
+![](https://velog.velcdn.com/images/bini/post/f214d315-799b-42de-a258-88d1951b1c62/image.png)
